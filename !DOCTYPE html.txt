@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbrotar</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font from Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font and a light gray background to the body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background for the page */
+        }
+        /* Custom scrollbar styling for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px; /* Width of the scrollbar */
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Color of the scrollbar track */
+            border-radius: 10px; /* Rounded corners for the track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the scrollbar thumb */
+            border-radius: 10px; /* Rounded corners for the thumb */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Color of the scrollbar thumb on hover */
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header section: Fixed at the top, responsive, with site title and navigation -->
+    <header class="bg-white shadow-md p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">Abbrotar</h1>
+            <nav class="space-x-4">
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Profile</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Messages</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area: Flex container for sidebar and feed, responsive layout -->
+    <main class="flex-grow container mx-auto p-4 flex flex-col lg:flex-row gap-6 mt-4">
+        <!-- Left Sidebar: User Info and Navigation links -->
+        <aside class="lg:w-1/4 w-full bg-white p-6 rounded-lg shadow-md h-fit">
+            <div class="flex items-center space-x-4 mb-6">
+                <!-- User profile image placeholder -->
+                <img src="https://placehold.co/80x80/cccccc/333333?text=User" alt="User Profile" class="w-20 h-20 rounded-full border-2 border-blue-400">
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                    <p class="text-gray-500">@johndoe</p>
+                </div>
+            </div>
+            <div class="mb-6">
+                <p class="text-gray-700 text-sm">Welcome to Abbrotar! Share your thoughts and connect with friends.</p>
+            </div>
+            <!-- Navigation list with SVG icons -->
+            <ul class="space-y-3">
+                <li><a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <span>Feed</span>
+                </a></li>
+                <li><a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Profile</span>
+                </a></li>
+                <li><a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    <span>Messages</span>
+                </a></li>
+                <li><a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span>Settings</span>
+                </a></li>
+            </ul>
+            <!-- Display area for the current user's ID -->
+            <div class="mt-6 p-3 bg-blue-100 rounded-md text-sm text-blue-700">
+                <p>Your User ID: <span id="userIdDisplay" class="font-bold break-all">Loading...</span></p>
+            </div>
+        </aside>
+
+        <!-- Main Feed Area: Contains post creation and the feed of posts -->
+        <section class="lg:w-3/4 w-full">
+            <!-- Create Post Section: Input field and button for new posts -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Create New Post</h2>
+                <textarea id="postContent" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-y mb-4" rows="3" placeholder="What's on your mind?"></textarea>
+                <button id="postButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out">
+                    Post
+                </button>
+                <!-- Message box for user feedback (e.g., success/error messages) -->
+                <div id="messageBox" class="mt-4 p-3 rounded-md text-sm hidden"></div>
+            </div>
+
+            <!-- Posts Feed: Area where posts will be dynamically loaded -->
+            <div id="postsFeed" class="space-y-6">
+                <!-- Sample post to show the structure before dynamic content loads -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://placehold.co/40x40/cccccc/333333?text=A" alt="Avatar" class="w-10 h-10 rounded-full">
+                        <div>
+                            <p class="font-semibold text-gray-800">Sample User</p>
+                            <p class="text-gray-500 text-sm">2 hours ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">This is a sample post to show how the feed will look. You can create your own posts using the input box above!</p>
+                    <div class="flex items-center space-x-4 text-gray-500 text-sm">
+                        <button class="flex items-center space-x-1 hover:text-blue-600 transition duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            <span>12 Likes</span>
+                        </button>
+                        <button class="flex items-center space-x-1 hover:text-blue-600 transition duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            <span>5 Comments</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="bg-gray-800 text-white p-4 text-center mt-8">
+        <p>&copy; 2025 Abbrotar. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDKs and custom JavaScript for app logic -->
+    <script type="module">
+        // Import necessary Firebase modules from CDN
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // IMPORTANT: For deployment on GitHub Pages, you MUST replace these placeholder variables
+        // with your actual Firebase project configuration details.
+        // You can find your firebaseConfig object in your Firebase Project Console under Project settings -> Your apps.
+        // Example of how it should look after replacing:
+        /*
+        const firebaseConfig = {
+          apiKey: "YOUR_API_KEY",
+          authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+          projectId: "YOUR_PROJECT_ID",
+          storageBucket: "YOUR_PROJECT_ID.appspot.com",
+          messagingSenderId: "YOUR_SENDER_ID",
+          appId: "YOUR_APP_ID"
+        };
+        const appId = firebaseConfig.appId; // Use the appId from your config
+        const initialAuthToken = null; // Set to null unless you have a specific custom token
+        */
+        // These variables are provided by the Canvas environment for testing, but need replacement for external hosting.
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+
+        let app; // Firebase app instance
+        let db;  // Firestore database instance
+        let auth; // Firebase Auth instance
+        let userId = null; // Stores the current authenticated user's ID
+
+        // Function to display temporary messages to the user (e.g., success, error)
+        function showMessage(message, type = 'info') {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.textContent = message;
+            // Remove all previous styling classes
+            messageBox.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700', 'bg-blue-100', 'text-blue-700');
+            // Apply specific styling based on message type
+            if (type === 'error') {
+                messageBox.classList.add('bg-red-100', 'text-red-700');
+            } else if (type === 'success') {
+                messageBox.classList.add('bg-green-100', 'text-green-700');
+            } else {
+                messageBox.classList.add('bg-blue-100', 'text-blue-700');
+            }
+            // Make the message box visible
+            messageBox.classList.remove('hidden');
+            // Hide the message box after 5 seconds
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 5000);
+        }
+
+        // This function runs once the entire HTML document is loaded
+        window.onload = async function() {
+            try {
+                // Initialize Firebase services with the provided configuration
+                app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // Set up an authentication state listener. This will be called whenever the user's sign-in state changes.
+                onAuthStateChanged(auth, async (user) => {
+                    if (user) {
+                        // If a user is signed in, set the userId and display it
+                        userId = user.uid;
+                        document.getElementById('userIdDisplay').textContent = userId;
+                        console.log("User authenticated:", userId);
+                        // Once authenticated, start listening for real-time post updates
+                        listenForPosts();
+                    } else {
+                        // If no user is signed in, try to sign in using the initial custom token (if available)
+                        // or sign in anonymously.
+                        try {
+                            if (initialAuthToken) {
+                                await signInWithCustomToken(auth, initialAuthToken);
+                            } else {
+                                await signInAnonymously(auth);
+                            }
+                        } catch (error) {
+                            // Log and display any errors during the sign-in process
+                            console.error("Error signing in:", error);
+                            showMessage(`Authentication failed: ${error.message}`, 'error');
+                            // As a fallback, generate a random UUID for unauthenticated users
+                            // Note: Firestore security rules might prevent data access for unauthenticated users.
+                            userId = crypto.randomUUID();
+                            document.getElementById('userIdDisplay').textContent = userId + " (Anon/Error)";
+                            listenForPosts(); // Still attempt to listen for posts, but access may be restricted
+                        }
+                    }
+                });
+
+                // Get references to DOM elements
+                const postButton = document.getElementById('postButton');
+                const postContentInput = document.getElementById('postContent');
+                const postsFeed = document.getElementById('postsFeed');
+
+                // Event listener for the 'Post' button click
+                postButton.addEventListener('click', async () => {
+                    const content = postContentInput.value.trim(); // Get content and remove leading/trailing whitespace
+                    if (content === "") {
+                        showMessage("Post content cannot be empty!", 'error'); // Prevent empty posts
+                        return;
+                    }
+
+                    if (!userId) {
+                        showMessage("User not authenticated. Please wait or refresh.", 'error'); // Ensure user is authenticated
+                        return;
+                    }
+
+                    try {
+                        // Add a new document to the 'posts' collection in Firestore.
+                        // The path is structured for public data within the Canvas environment.
+                        // Firestore rules typically allow read/write if request.auth != null for this path.
+                        await addDoc(collection(db, `artifacts/${appId}/public/data/posts`), {
+                            userId: userId, // Store the ID of the user who created the post
+                            content: content, // The actual text content of the post
+                            timestamp: serverTimestamp(), // Use Firestore's server timestamp for accurate ordering
+                            likes: 0, // Initialize likes count
+                            comments: 0 // Initialize comments count
+                        });
+                        postContentInput.value = ''; // Clear the input field after successful post
+                        showMessage("Post added successfully!", 'success'); // Show success message
+                    } catch (e) {
+                        console.error("Error adding document: ", e); // Log the error
+                        showMessage(`Error adding post: ${e.message}`, 'error'); // Display error message to user
+                    }
+                });
+
+                // Function to set up a real-time listener for posts from Firestore
+                function listenForPosts() {
+                    // Create a query to the 'posts' collection.
+                    // Removed orderBy('timestamp', 'desc') from the query to avoid potential Firestore index issues
+                    // that might require manual index creation. Sorting will now be done client-side.
+                    const postsQuery = query(collection(db, `artifacts/${appId}/public/data/posts`));
+
+                    // onSnapshot provides real-time updates: it's called initially and every time the data changes.
+                    onSnapshot(postsQuery, (snapshot) => {
+                        postsFeed.innerHTML = ''; // Clear the current feed to re-render all posts
+                        const posts = [];
+                        // Iterate through each document in the snapshot
+                        snapshot.forEach((doc) => {
+                            const data = doc.data(); // Get the data of the document
+                            posts.push({ id: doc.id, ...data }); // Add document ID and data to the posts array
+                        });
+
+                        // Manually sort posts by timestamp in descending order (newest first)
+                        // This is done client-side since orderBy was removed from the query.
+                        posts.sort((a, b) => (b.timestamp?.toDate() || 0) - (a.timestamp?.toDate() || 0));
+
+                        if (posts.length === 0) {
+                            // Display a message if there are no posts
+                            postsFeed.innerHTML = '<p class="text-gray-500 text-center p-4">No posts yet. Be the first to post!</p>';
+                        } else {
+                            // Render each post
+                            posts.forEach(post => {
+                                const postElement = document.createElement('div');
+                                postElement.className = 'bg-white p-6 rounded-lg shadow-md'; // Apply Tailwind classes
+                                // Format the timestamp, or display 'Just now' if not available
+                                const postDate = post.timestamp ? new Date(post.timestamp.toDate()).toLocaleString() : 'Just now';
+
+                                // Construct the HTML for each post
+                                postElement.innerHTML = `
+                                    <div class="flex items-center space-x-3 mb-4">
+                                        <img src="https://placehold.co/40x40/cccccc/333333?text=${post.userId ? post.userId.substring(0,1).toUpperCase() : '?'}" alt="Avatar" class="w-10 h-10 rounded-full">
+                                        <div>
+                                            <p class="font-semibold text-gray-800 break-all">${post.userId || 'Anonymous'}</p>
+                                            <p class="text-gray-500 text-sm">${postDate}</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">${post.content}</p>
+                                    <div class="flex items-center space-x-4 text-gray-500 text-sm">
+                                        <button class="flex items-center space-x-1 hover:text-blue-600 transition duration-200">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                            <span>${post.likes || 0} Likes</span>
+                                        </button>
+                                        <button class="flex items-center space-x-1 hover:text-blue-600 transition duration-200">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                            <span>${post.comments || 0} Comments</span>
+                                        </button>
+                                    </div>
+                                `;
+                                postsFeed.appendChild(postElement); // Add the post element to the feed
+                            });
+                        }
+                    }, (error) => {
+                        // Handle errors during real-time listening
+                        console.error("Error fetching posts: ", error);
+                        showMessage(`Error loading posts: ${error.message}`, 'error');
+                    });
+                }
+
+            } catch (error) {
+                // Catch any errors during Firebase initialization or script loading
+                console.error("Failed to initialize Firebase or load script:", error);
+                showMessage(`Failed to load the application: ${error.message}`, 'error');
+                document.getElementById('userIdDisplay').textContent = "Error loading app.";
